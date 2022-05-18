@@ -9,10 +9,17 @@ namespace Parachute
     public class Parachuter
     {
        
+        List<string> wordList = new List<string>{
+            ""
+        };
         public Parachuter()
         {
             
         }
+
+
+
+
 
     }
 }
