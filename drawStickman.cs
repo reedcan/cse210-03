@@ -22,5 +22,5 @@ namespace Parachute {
        "            /   \t               \n"     };
         
     }
-    console.Writeline(completeStickman);
+    
 }
