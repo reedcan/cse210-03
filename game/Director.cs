@@ -11,6 +11,7 @@ namespace Parachute
         private bool isPlaying = true;
         private TerminalService terminalService = new TerminalService();
 
+
         /// <summary>
         /// Constructs a new instance of Director.
         /// </summary>
