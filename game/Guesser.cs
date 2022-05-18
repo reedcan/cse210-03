@@ -16,7 +16,14 @@ namespace Parachute
             // make list with blank lines
             // if guess matches letter then append letter to blank line list
         }
+         private string GetWord()
+         {
 
+         }
 
+        private string UpdateLines()
+        {
+
+        }
     }
 }
