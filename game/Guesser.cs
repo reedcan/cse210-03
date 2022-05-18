@@ -11,7 +11,10 @@ namespace Parachute
         
         public Guesser()
         {
-            
+            // if user guess = letter from random word from parachute
+            // if player guess = item in the list
+            // make list with blank lines
+            // if guess matches letter then append letter to blank line list
         }
 
 
