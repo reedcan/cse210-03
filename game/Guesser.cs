@@ -1,4 +1,6 @@
-//Handles correct/incorrect guess logic, similar to Seeker from Hide and Seek
+//Handles correct/incorrect guess logic, similar to Seeker from Hide and Seek.
+//Has a method that will display a list of "_" depending on how many letters in the word recieved from Word.cs
+//Has a method that will take a user inputed letter and decide if it is in the word, and if it is it will update the corresponding "_" with that letter
 
 using System;
 
