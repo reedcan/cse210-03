@@ -22,6 +22,7 @@ namespace Parachute
         };
 
         string randomWord = "";
+        int randomWordIndex;
 
         public Word()
         {
@@ -31,7 +32,9 @@ namespace Parachute
         public string getRandomWord()
         {
             Random random = new Random();
-            randomWord = random.Next(0, wordList.Count);
+            randomWordIndex = random.Next(0, wordList.Count);
+
+            randomWord = wordList[randomWordIndex];
 
             return randomWord;
         }
