@@ -20,7 +20,11 @@ namespace Parachute
         }
          private string GetWord()
          {
-             
+            // Call and return the getRandomWord function
+            Word word = new Word();
+            word.getRandomWord();
+
+            return word.getRandomWord();
          }
 
         private string UpdateLines()
