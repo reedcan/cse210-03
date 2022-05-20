@@ -38,5 +38,18 @@ namespace Parachute
 
             return randomWord;
         }
+
+        public string convertRandomWord(string randomWord)
+        {
+           //int wordLength = randomWord.Length;
+           List newWord = new List();
+
+           foreach (char letterChar in randomWord)
+           {
+               string letter = letterChar.ToString();
+                newWord.Add(letter);
+           }
+
+        }
     }
 }
