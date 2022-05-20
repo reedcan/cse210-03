@@ -10,7 +10,8 @@ namespace Parachute
     
     public class Guesser
     {
-        List<Word> words = new List<Word>();
+        Word words = new Word();
+        
         public Guesser()
         {
             // if user guess = letter from random word from parachute
@@ -18,18 +19,24 @@ namespace Parachute
             // make list with blank lines
             // if guess matches letter then append letter to blank line list
         }
-         private string GetWord()
+        private string GetWord()
          {
-            // Call and return the getRandomWord function
-            Word word = new Word();
-            word.getRandomWord();
 
-            return word.getRandomWord();
+            // Call and return the getRandomWord function
+            List<string>word = words.convertRandomWord();
+            foreach (string letter in word)
+            {
+                string _ = letter;
+                List<string>lines.append(_);
+            }
+
+
+            return words.getRandomWord();
          }
 
-        private string UpdateLines()
-        {
+    //     private string UpdateLines();
+    //     {
 
-        }
+    //     }
     }
 }
