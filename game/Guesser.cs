@@ -10,7 +10,7 @@ namespace Parachute
     
     public class Guesser
     {
-        
+        List<Word> words = new List<Word>();
         public Guesser()
         {
             // if user guess = letter from random word from parachute
