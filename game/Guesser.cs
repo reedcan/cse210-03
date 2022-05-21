@@ -35,30 +35,41 @@ namespace Parachute
             
          }
 
-        private void CheckGuess(string guess, List<string> lines, List<string> wordList)
+        private List<string> CheckGuess(string guess, List<string> lines, List<string> wordList)
          {
              // if guess is in random generated word
              // then convert line into latter
             
             if (wordList.Contains(guess))
             {
-                foreach (string line in lines);
+                int index = -1;
+                foreach (string letter in wordList)
                 {
-                    if (letter = guess)
+                    ++index;
+                    if (letter == guess)
                     {
-                        string guess = line
-                        lines.Add(guess);
+                        lines[index] = guess;
                     }
                 }
+                
                     
             }
-
+            return lines;
 
          }
 
-    //     private string UpdateLines();
-    //     {
-
-    //     }
+        private bool completedWord(List<string>lines, List<string> wordList)
+         {
+                //check if wordlist same as getRandom word
+                // return bool
+                if (lines.SequenceEqual(wordList)) 
+                {
+                    return true;
+                }
+                else 
+                {
+                    return false;
+                }
+         }
     }
 }
