@@ -10,12 +10,12 @@ namespace Parachute
     /// terminal.
     /// </para>
     /// </summary>
-    public class TerminalService
+    public class IO
     {
         /// <summary>
         /// Constructs a new instance of TerminalService.
         /// </summary>
-        public TerminalService()
+        public IO()
         {
         }
 
