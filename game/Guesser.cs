@@ -23,15 +23,23 @@ namespace Parachute
          {
 
             // Call and return the getRandomWord function
-            List<string>word = words.convertRandomWord();
+            string word = words.getRandomWord();
+            List<string>wordList = words.convertRandomWord(word);
             foreach (string letter in word)
             {
-                string _ = letter;
-                List<string>lines.append(_);
+                List<string>lines = new List<string>();
+                lines.Add("_");
             }
 
 
             return words.getRandomWord();
+         }
+
+         private string CheckGuess(guess)
+         {
+             // if guess is in random generated word
+             // then convert line into latter
+
          }
 
     //     private string UpdateLines();
