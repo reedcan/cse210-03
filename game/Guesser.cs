@@ -19,32 +19,57 @@ namespace Parachute
             // make list with blank lines
             // if guess matches letter then append letter to blank line list
         }
-        private string GetWord()
+        public List<string> GetWord()
          {
 
             // Call and return the getRandomWord function
             string word = words.getRandomWord();
             List<string>wordList = words.convertRandomWord(word);
-            foreach (string letter in word)
+            foreach (string letter in wordList)
             {
                 List<string>lines = new List<string>();
                 lines.Add("_");
+                return lines;
             }
-
-
-            return words.getRandomWord();
+            return wordList;
+            
          }
 
-         private string CheckGuess(guess)
+        private List<string> CheckGuess(string guess, List<string> lines, List<string> wordList)
          {
              // if guess is in random generated word
              // then convert line into latter
+            
+            if (wordList.Contains(guess))
+            {
+                int index = -1;
+                foreach (string letter in wordList)
+                {
+                    ++index;
+                    if (letter == guess)
+                    {
+                        lines[index] = guess;
+                    }
+                }
+                
+                    
+            }
+            return lines;
 
          }
 
-    //     private string UpdateLines();
-    //     {
-
-    //     }
+        private bool completedWord(List<string>lines, List<string> wordList)
+         {
+                //check if wordlist same as getRandom word
+                // return bool
+                if (lines.SequenceEqual(wordList)) 
+                {
+                    return true;
+                }
+                else 
+                {
+                    return false;
+                }
+         }
     }
 }
