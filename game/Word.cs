@@ -39,7 +39,7 @@ namespace Parachute
             return randomWord;
         }
 
-        public string convertRandomWord(string randomWord)
+        public List<string> convertRandomWord(string randomWord)
         {
            //int wordLength = randomWord.Length;
            List newWord = new List();
@@ -50,6 +50,7 @@ namespace Parachute
                 newWord.Add(letter);
            }
 
+            return newWord;
         }
     }
 }
