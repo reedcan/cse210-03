@@ -9,7 +9,7 @@ namespace Parachute
     public class Director
     {
         private bool isPlaying = true;
-        private TerminalService terminalService = new TerminalService();
+        private IO iO = new IO();
 
 
         /// <summary>
@@ -35,7 +35,8 @@ namespace Parachute
         
         private void GetInputs()
         {
-            
+            string guess = iO.ReadText("\nGuess a letter [a-z]: ");
+        
         }
 
         
