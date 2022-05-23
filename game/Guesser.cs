@@ -51,6 +51,10 @@ namespace Parachute
                     {
                         lines[index] = guess;
                     }
+                    else {
+                        stickman.numberOfIncorrectGuesses++;
+                        Console.WriteLine("Sorry bub, that letter is not in the word.");
+                    }
                 }
                 
                     
@@ -63,6 +67,7 @@ namespace Parachute
          {
                 //check if wordlist same as getRandom word
                 // return bool
+                // 
                 if (lines.SequenceEqual(wordList)) 
                 {
                     return true;
@@ -71,7 +76,7 @@ namespace Parachute
                 else 
                 {
                     return false;
-                    numberOfIncorrectGuesses++;
+                    
                 }
          }
     }
