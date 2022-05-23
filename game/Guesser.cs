@@ -20,7 +20,7 @@ namespace Parachute
             // make list with blank lines
             // if guess matches letter then append letter to blank line list
         }
-        public List<string> GetWord()
+        public List<string> GetWords()
          {
 
             // Call and return the getRandomWord function
