@@ -52,7 +52,7 @@ namespace Parachute
                         lines[index] = guess;
                     }
                     else {
-                        stickman.numberOfIncorrectGuesses++;
+                        Director.numberOfIncorrectGuesses++;
                         Console.WriteLine("Sorry bub, that letter is not in the word.");
                     }
                 }

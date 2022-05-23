@@ -11,7 +11,7 @@ namespace Parachute
         private bool isPlaying = true;
         private IO iO = new IO();
 
-        private int numberOfIncorrectGuesses = 0;
+        public static int numberOfIncorrectGuesses = 0;
         Stickman stickman = new Stickman();
 
         /// <summary>
