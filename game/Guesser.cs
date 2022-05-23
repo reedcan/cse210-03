@@ -11,6 +11,7 @@ namespace Parachute
     public class Guesser
     {
         Word words = new Word();
+        Stickman stickman = new Stickman();
         
         public Guesser()
         {
@@ -65,10 +66,12 @@ namespace Parachute
                 if (lines.SequenceEqual(wordList)) 
                 {
                     return true;
+
                 }
                 else 
                 {
                     return false;
+                    numberOfIncorrectGuesses++;
                 }
          }
     }
