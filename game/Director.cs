@@ -13,6 +13,8 @@ namespace Parachute
 
         public static int numberOfIncorrectGuesses = 0;
         Stickman stickman = new Stickman();
+        Guesser Guesser = new Guesser();
+        List<string> lines = Guesser.GetWord();
 
         /// <summary>
         /// Constructs a new instance of Director.
@@ -53,6 +55,7 @@ namespace Parachute
         private void DoUpdates()
         {
             
+            Guesser.CheckGuess(guess, )
         }
 
         /// <summary>

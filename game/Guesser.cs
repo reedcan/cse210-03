@@ -36,7 +36,7 @@ namespace Parachute
             
          }
 
-        private List<string> CheckGuess(string guess, List<string> lines, List<string> wordList)
+        public List<string> CheckGuess(string guess, List<string> lines, List<string> wordList)
          {
              // if guess is in random generated word
              // then convert line into latter
