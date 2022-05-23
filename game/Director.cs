@@ -11,6 +11,8 @@ namespace Parachute
         private bool isPlaying = true;
         private IO iO = new IO();
 
+        private int numberOfIncorrectGuesses = 0;
+        Stickman stickman = new Stickman();
 
         /// <summary>
         /// Constructs a new instance of Director.
@@ -25,7 +27,8 @@ namespace Parachute
         public void StartGame()
         {
             while (isPlaying)
-            {
+            {   
+                stickman.drawStickman(numberOfIncorrectGuesses);
                 GetInputs();
                 DoUpdates();
                 DoOutputs();

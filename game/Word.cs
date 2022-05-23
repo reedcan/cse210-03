@@ -42,7 +42,7 @@ namespace Parachute
         public List<string> convertRandomWord(string randomWord)
         {
            //int wordLength = randomWord.Length;
-           List newWord = new List();
+           List<string> newWord = new List<string>();
 
            foreach (char letterChar in randomWord)
            {
