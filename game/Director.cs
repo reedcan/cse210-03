@@ -36,6 +36,10 @@ namespace Parachute
         }
 
         
+
+        /// <summary>
+        /// Gets users input for the guess
+        /// </summary>
         private void GetInputs()
         {
             string guess = iO.ReadText("\nGuess a letter [a-z]: ");
@@ -43,12 +47,17 @@ namespace Parachute
         }
 
         
+        /// <summary>
+        /// updates all the information using the input that was recieved
+        /// </summary>
         private void DoUpdates()
         {
             
         }
 
-        
+        /// <summary>
+        /// Gives all the information needed to get the player ready to start their next turn/ guess
+        /// </summary>
         private void DoOutputs()
         {
             

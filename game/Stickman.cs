@@ -97,7 +97,6 @@ namespace Parachute {
         public void drawStickman(int numberOfIncorrectGuesses)
         {
             //if input in list then numberofincorrectguesses stays, else number of incorrect guesses++
-            if 
             if (numberOfIncorrectGuesses == 0)
             {
                 Console.WriteLine(completeStickman);
