@@ -14,7 +14,7 @@ namespace Parachute
         public static int numberOfIncorrectGuesses = 0;
         Stickman stickman = new Stickman();
         Guesser Guesser = new Guesser();
-        List<string> lines = Guesser.GetWord();
+        List<string> wordList = Guesser.GetWord();
 
         /// <summary>
         /// Constructs a new instance of Director.
@@ -42,7 +42,7 @@ namespace Parachute
         /// <summary>
         /// Gets users input for the guess
         /// </summary>
-        private void GetInputs()
+        public void GetInputs()
         {
             string guess = iO.ReadText("\nGuess a letter [a-z]: ");
         
@@ -55,7 +55,7 @@ namespace Parachute
         private void DoUpdates()
         {
             
-            Guesser.CheckGuess(guess, )
+            Guesser.CheckGuess(guess, , wordList)
         }
 
         /// <summary>
