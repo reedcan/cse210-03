@@ -11,12 +11,12 @@ namespace Parachute
     public class Guesser
     {
         Word words = new Word();
-        Stickman stickman = new Stickman();
-
         List<string> lines = new List<string>{};
 
         List<string> wordList = new List<string>();
         string randomWord = "";
+
+        int incorrectGuesses;
         
         public Guesser()
         {
@@ -33,7 +33,7 @@ namespace Parachute
          }
 
 
-        public int checkGuess(string guess, int incorrectGuesses)
+        public int checkGuess(string guess)
         {
 
             if(wordList.Contains(guess))
