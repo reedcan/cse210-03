@@ -18,7 +18,7 @@ namespace Parachute
             "perfect", "present", "queen", "question", "quick", "radio", "remember", "ruler", "sad",
             "someone", "strange", "table", "telephone", "travel", "under", "useful", "usually",
             "vegetable", "village", "visit", "wait", "water", "world", "yard", "yesterday", "young",
-            "zero", "zoo"
+            "zero", "zoo", "anatidaephobia"
         };
 
         string randomWord = "";
