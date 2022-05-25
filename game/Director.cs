@@ -9,19 +9,19 @@ namespace Parachute
     public class Director
     {
         private bool isPlaying = true;
-        private IO iO = new IO();
+        private IO io = new IO();
 
-        public static int numberOfIncorrectGuesses = 0;
-        Stickman stickman = new Stickman();
-        Guesser guesser = new Guesser();
-        List<string> wordList = new List<string>();
+        private Guesser guesser = new Guesser();
+        private Stickman stickman = new Stickman();
+        Word word = new Word();
+        string guess = "";
+        int incorrectGuesses;
+        bool wordCompleted = false;
 
-        /// <summary>
-        /// Constructs a new instance of Director.
-        /// </summary>
+
+       
         public Director()
         {
-            wordList = guesser.GetWords();
         }
 
         /// <summary>
@@ -29,9 +29,13 @@ namespace Parachute
         /// </summary>
         public void StartGame()
         {
+            //string answer = word.getRandomWord();
+            guesser.GetWords();
+            stickman.drawStickman(incorrectGuesses);
+            guesser.displayLines();
+
             while (isPlaying)
-            {   
-                stickman.drawStickman(numberOfIncorrectGuesses);
+            {
                 GetInputs();
                 DoUpdates();
                 DoOutputs();
@@ -39,32 +43,39 @@ namespace Parachute
         }
 
         
-
-        /// <summary>
-        /// Gets users input for the guess
-        /// </summary>
-        public void GetInputs()
+        private void GetInputs()
         {
-            string guess = iO.ReadText("\nGuess a letter [a-z]: ");
-        
+            guess = io.ReadText("\nPlease guess a letter: ");
         }
 
         
-        /// <summary>
-        /// updates all the information using the input that was recieved
-        /// </summary>
         private void DoUpdates()
         {
+            incorrectGuesses = guesser.checkGuess(guess, incorrectGuesses);
+            wordCompleted = guesser.completedWordCheck();
+            if (incorrectGuesses >= 4)
+            {
+                Console.WriteLine("\n\nYou died!");
+                guesser.displayWordList();
+                isPlaying = false;
+
+            }
+            if (wordCompleted)
+            {
+                Console.WriteLine("\n\nCongratulations! You guessed it right!");
+                isPlaying = false;
+            }
             
-            guesser.CheckGuess(guess, , wordList)
         }
 
-        /// <summary>
-        /// Gives all the information needed to get the player ready to start their next turn/ guess
-        /// </summary>
+
         private void DoOutputs()
         {
-            
+            stickman.drawStickman(incorrectGuesses);
+            if (isPlaying)
+            {
+                guesser.displayLines();
+            }
         }
     }
 }

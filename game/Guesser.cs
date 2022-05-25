@@ -12,6 +12,11 @@ namespace Parachute
     {
         Word words = new Word();
         Stickman stickman = new Stickman();
+
+        List<string> lines = new List<string>{};
+
+        List<string> wordList = new List<string>();
+        string randomWord = "";
         
         public Guesser()
         {
@@ -19,65 +24,73 @@ namespace Parachute
             // if player guess = item in the list
             // make list with blank lines
             // if guess matches letter then append letter to blank line list
+            randomWord = words.getRandomWord();
+            wordList = words.convertRandomWord(randomWord);
         }
-        public List<string> GetWords()
-         {
 
-            // Call and return the getRandomWord function
-            string word = words.getRandomWord();
-            List<string>wordList = words.convertRandomWord(word);
+        public void GetWords()
+         {
             foreach (string letter in wordList)
             {
-                List<string>lines = new List<string>();
                 lines.Add("_");
-                return lines;
-            }
-            return wordList;
-            
+            }          
          }
 
-        public List<string> CheckGuess(string guess, List<string> lines, List<string> wordList)
-         {
-             // if guess is in random generated word
-             // then convert line into latter
-            
-            if (wordList.Contains(guess))
+
+        public int checkGuess(string guess, int incorrectGuesses)
+        {
+
+            if(wordList.Contains(guess))
             {
                 int index = -1;
-                foreach (string letter in wordList)
+                foreach(string letter in wordList)
                 {
                     ++index;
-                    if (letter == guess)
+                    if(guess==letter)
                     {
-                        lines[index] = guess;
-                    }
-                    else {
-                        Director.numberOfIncorrectGuesses++;
-                        Console.WriteLine("Sorry bub, that letter is not in the word.");
+                        lines[index] = letter;
                     }
                 }
-                
-                    
+                return incorrectGuesses;
             }
-            return lines;
+            else
+            {
+                ++incorrectGuesses;
+                return incorrectGuesses;
+            }
+        }
 
-         }
 
-        private bool completedWord(List<string>lines, List<string> wordList)
-         {
-                //check if wordlist same as getRandom word
-                // return bool
-                // 
-                if (lines.SequenceEqual(wordList)) 
-                {
-                    return true;
+        public bool completedWordCheck()
+        {
+            if (lines.SequenceEqual(wordList))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-                }
-                else 
-                {
-                    return false;
-                    
-                }
-         }
+        public void displayLines()
+        {
+            foreach(string letter in lines)
+            {
+                Console.Write(letter);
+            }
+        }
+
+        public void displayWordList()
+        {
+            Console.Write("\nThe answer was: ");
+            foreach(string letter in wordList)
+            {
+                Console.Write(letter);
+            }
+            Console.WriteLine();
+        }
     }
 }
+
+        
