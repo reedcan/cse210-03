@@ -51,7 +51,7 @@ namespace Parachute
         
         private void DoUpdates()
         {
-            incorrectGuesses = guesser.checkGuess(guess, incorrectGuesses);
+            incorrectGuesses = guesser.checkGuess(guess);
             wordCompleted = guesser.completedWordCheck();
             if (incorrectGuesses >= 4)
             {

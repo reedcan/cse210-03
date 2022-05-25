@@ -17,6 +17,8 @@ namespace Parachute
 
         List<string> wordList = new List<string>();
         string randomWord = "";
+
+        int incorrectGuesses;
         
         public Guesser()
         {
@@ -33,7 +35,7 @@ namespace Parachute
          }
 
 
-        public int checkGuess(string guess, int incorrectGuesses)
+        public int checkGuess(string guess)
         {
 
             if(wordList.Contains(guess))
