@@ -11,8 +11,6 @@ namespace Parachute
     public class Guesser
     {
         Word words = new Word();
-        Stickman stickman = new Stickman();
-
         List<string> lines = new List<string>{};
 
         List<string> wordList = new List<string>();

@@ -13,7 +13,6 @@ namespace Parachute
 
         private Guesser guesser = new Guesser();
         private Stickman stickman = new Stickman();
-        Word word = new Word();
         string guess = "";
         int incorrectGuesses;
         bool wordCompleted = false;
@@ -53,7 +52,7 @@ namespace Parachute
         {
             incorrectGuesses = guesser.checkGuess(guess);
             wordCompleted = guesser.completedWordCheck();
-            if (incorrectGuesses >= 4)
+            if (incorrectGuesses >= 5)
             {
                 Console.WriteLine("\n\nYou died!");
                 guesser.displayWordList();
