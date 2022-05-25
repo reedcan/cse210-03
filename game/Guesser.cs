@@ -28,7 +28,7 @@ namespace Parachute
          {
             foreach (string letter in wordList)
             {
-                lines.Add("_");
+                lines.Add("_ ");
             }          
          }
 
