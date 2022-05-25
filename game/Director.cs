@@ -29,7 +29,7 @@ namespace Parachute
         /// </summary>
         public void StartGame()
         {
-            //string answer = word.getRandomWord();
+            
             guesser.GetWords();
             stickman.drawStickman(incorrectGuesses);
             guesser.displayLines();
